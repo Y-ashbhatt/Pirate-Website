@@ -254,12 +254,15 @@ img {
 
 .home__waves-1{
   bottom: -1.5rem;
+  animation: waves-1 4s linear infinite;
 }
 .home__waves-2{
   bottom: -1rem;
+  animation: waves-2 4s linear infinite;
 }
 .home__waves-3{
   bottom: 3rem;
+  animation: waves-1 4s linear infinite;
 }
 
 .home__ship{
@@ -269,6 +272,8 @@ img {
   left: 0;right: 0;
   margin-inline: auto;
   transform-origin: center center;
+  animation: ship 2s linear infinite;
+
 }
 
 
@@ -280,14 +285,29 @@ img {
 }
 
 @keyframes cloud-2{
-  0% { margin-left: 1000%; }
-  100% {margin-left:  1000px ; }
+  0% { margin-left: 100%; }
+  100% {margin-left:  -1000px ; }
 }
 
 /* Animated waves */
+@keyframes waves-1{
+  0% { background-position-x: 1000px; }
+  100% {background-position-x:  0 ; }
+}
 
+@keyframes waves-2{
+  0% { background-position-x: 0; }
+  100% {background-position-x:  1000px ; }
+}
 
 /* Animated ship */
+@keyframes ship{
+  0% { transform: translateY(0) rotate(0); }
+  25% { transform: translateY(0) rotate(-8deg); }
+  40% { transform: translateY(4px) rotate(-8deg); }
+  85% { transform: translateY(1px) rotate(8deg); }
+  100% {transform: translateY(0) rotate(0) ; }
+}
 
 
 /*=============== BREAKPOINTS ===============*/
